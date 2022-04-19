@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt update -y
-RUN apt install apache2 -y
-RUN service apache2 restart
+RUN apt install httpd -y
+RUN service httpd restart
 RUN apt install php7.4 php7.4-fpm php7.4-mbstring php7.4-mysql -y
 RUN a2enmod proxy_fcgi setenvif
 RUN a2enconf php7.4-fpm
